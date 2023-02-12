@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  user-select: none;
+}
+body {
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+}
+
+/* navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-block: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.orphanage-logo {
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-buttons ul {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.nav-buttons ul li {
+  list-style: none;
+  display: block;
+  padding: 8px 10px;
+  width: 90px;
+}
+.nav-buttons ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+.nav-buttons ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease-in-out;
+}
+.nav-buttons ul li:hover::after {
+  width: 100%;
+}
+/* header */
+header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/images/bg.jpeg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* header text */
+.text-box {
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+}
+.show-btn,
+.hide-btn {
+  color: #fff;
+  display: none;
+}
+.hide-btn {
+  position: absolute;
+  left: 20px;
+}
+
+/* home main part */
+/* card */
+.works {
+  margin-block: 50px;
+  display: flex;
+  gap: 30px;
+  margin-inline: auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.works .card {
+  margin-top: 20px;
+  width: 300px;
+  line-height: 1.5;
+}
+.works .card h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+
+  margin-inline: auto;
+  border-bottom: 3px solid #f44336;
+}
+.card-sub-icon {
+  width: 70px;
+}
+
+/* about kodh */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.home h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 40px;
+  border: none;
+}
+.home h1 span {
+  color: #f44336;
+  text-shadow: -1px -1px 2px black;
+}
+.container {
+  width: 90vw;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+.container-left {
+  flex-basis: 50%;
+  flex-direction: column;
+  text-align: left;
+}
+.container-right img {
+  flex-basis: 50%;
+  width: 400px;
+}
+#content {
+  width: 80%;
+  margin-inline: auto;
+}
+section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* members page */
+.members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 50px;
+}
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  padding-block: 20px;
+}
+.mem-img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--orange);
+}
+
+.members li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* contact page */
+.maps {
+  width: 100vw;
+  height: 500px;
+  margin-inline: auto;
+}
+.contact-form {
+  display: grid;
+  place-items: center;
+
+  padding-block: 50px;
+}
+.contact-form form {
+  width: 500px;
+  background-color: aliceblue;
+  border: 2px solid var(--orange);
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 30px;
+  padding: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form form input,
+textarea {
+  border: 1px solid grey;
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  resize: none;
+}
+/* footer */
+.cta {
+  width: 100%;
+  padding-inline: 100px;
+  background-color: #111;
+  color: white;
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #f44336;
+}
+
+.cta-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.cta-right {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* footer
+ */
+.footer {
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  padding: 20px 100px;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-left {
+  display: flex;
+  gap: 30px;
+}
+.footer-right {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 50px;
+  }
+  .section h1 {
+    font-size: 30px;
+  }
+  .nav-buttons ul {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .nav-buttons ul li {
+    display: block;
+    text-align: center;
+  }
+  .nav-buttons {
+    color: #fff;
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 10;
+  }
+  .text-box {
+    z-index: 1;
+  }
+  .close-btn {
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
+  .hide-btn,
+  .show-btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .cta {
+    padding-inline: 20px;
+    font-size: 12px;
+  }
+  .cta-left {
+    width: 50%;
+  }
+  .footer {
+    font-size: 14px;
+    padding-inline: 20px;
+  }
+}

@@ -1,0 +1,35 @@
+:root {
+  --background: rgb(224, 235, 205);
+  --text-color: rgb(36, 35, 35);
+  --btn-text: white;
+  --orange: #f44336;
+}
+li {
+  list-style: none;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--btn-text);
+}
+
+.icon {
+  width: 50px;
+}
+.button {
+  padding-inline: 3%;
+  height: 30px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: aliceblue;
+  border-radius: 20%;
+}
