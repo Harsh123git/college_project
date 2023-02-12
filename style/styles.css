@@ -26,6 +26,8 @@ nav {
 }
 
 .navbar {
+  width: 90vw;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -69,7 +71,7 @@ header {
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(/images/bg.jpeg);
+    url(../images/bg.jpeg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -144,11 +146,10 @@ header {
   text-shadow: -1px -1px 2px black;
 }
 .container {
-  width: 90vw;
   margin-inline: auto;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 40px;
   justify-content: space-between;
 }
 .container-left {
@@ -156,9 +157,12 @@ header {
   flex-direction: column;
   text-align: left;
 }
-.container-right img {
+.container-right {
   flex-basis: 50%;
   width: 400px;
+}
+.container-right img {
+  width: 100%;
 }
 #content {
   width: 80%;
@@ -239,6 +243,7 @@ textarea {
   place-items: center;
   gap: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 2px solid #f44336;
 }
